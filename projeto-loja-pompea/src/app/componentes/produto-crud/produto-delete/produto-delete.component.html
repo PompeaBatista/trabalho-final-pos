@@ -1,0 +1,55 @@
+<div [hidden]="submitted" style="width: 400px;" class="container">
+    <h3>Novo Cliente</h3>
+    <div class="card">
+      <div class="card-body">
+        <form (ngSubmit)="onSubmit()"><br>
+          <div class="form-group">
+            <label for="name">Nome</label>
+            <input type="text" class="form-control" id="nome" required [(ngModel)]="produto.nome" name="nome" disabled>
+          </div>
+  
+          <div class="form-group">
+            <label for="name">Descrição</label>
+            <input type="text" class="form-control" id="descricao" required [(ngModel)]="produto.descricao"
+              name="descricao">
+          </div>
+  
+          <div class="form-group">
+            <label for="name">Preço Unitário</label>
+            <input type="number" class="form-control" id="precoUnitario" required [(ngModel)]="produto.precoUnitario" name="precoUnitario">
+          </div>
+  
+          <div class="form-group">
+            <label for="name">Unidade</label>
+            <input type="number" class="form-control" id="unidade" required [(ngModel)]="produto.unidade"
+              name="unidade">
+          </div>
+  
+          <div class="form-group">
+            <label for="name">Categoria</label>
+            <input type="text" class="form-control" id="categoria" required [(ngModel)]="produto.categoria.id" name="categoria">
+          </div>
+  
+          <div class="form-group">
+            <label for="name">Fornecedor</label>
+            <input type="text" class="form-control" id="fornecedor" required [(ngModel)]="produto.fornecedor.id"
+              name="fornecedor">
+          </div>
+  
+          <div class="form-group">
+            <label for="name">Marca</label>
+  
+            <input type="text" class="form-control" id="marca" required [(ngModel)]="produto.marca.id" name="marca">
+  
+          </div>
+          <button class="btn btn-info" style="margin-left: 10px">Deletar</button>
+          <button routerLink="/produtos" class="btn btn-info" style="margin-left: 10px">Voltar</button>
+  
+        </form>
+      </div>
+    </div>
+  </div>
+  
+  <div [hidden]="!submitted">
+  </div>
+  

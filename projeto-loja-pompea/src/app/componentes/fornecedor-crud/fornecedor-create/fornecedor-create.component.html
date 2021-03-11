@@ -1,0 +1,39 @@
+<div [hidden]="submitted" style="width: 400px;" class="container">
+    <h3>Novo Fornecedor</h3>
+    <div class="card">
+      <div class="card-body">
+        <form (ngSubmit)="onSubmit()"><br>
+          <div class="form-group">
+            <label for="name">Nome</label>
+            <input type="text" class="form-control" id="nome" required [(ngModel)]="fornecedor.nome" name="nome">
+          </div>
+  
+          <div class="form-group">
+            <label for="name">Telefone</label>
+            <input type="text" class="form-control" id="telefone" required [(ngModel)]="fornecedor.telefone"
+              name="telefone">
+          </div>
+  
+          <div class="form-group">
+            <label for="name">CNPJ</label>
+            <input type="text" class="form-control" id="cnpj" required [(ngModel)]="fornecedor.cnpj" name="cnpj">
+  
+          </div>
+  
+          <div class="form-group">
+            <label for="name">Email</label>
+            <input type="text" class="form-control" id="email" required [(ngModel)]="fornecedor.email" name="email">
+  
+          </div>
+  
+          <button class="btn btn-info" style="margin-left: 10px">Inserir fornecedor</button>
+          <button routerLink="/fornecedores" class="btn btn-info" style="margin-left: 10px">Voltar</button>
+  
+        </form>
+      </div>
+    </div>
+  </div>
+  
+  <div [hidden]="!submitted">
+  </div>
+  
